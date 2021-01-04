@@ -12,9 +12,6 @@ char twoD[4][4] = {{'F','A','C','I'},
                    {'M','A','S','S'}};
 
 int main() {
-    char holder;
-    bool found1, found2;
-    /*sizeof(twoD)/sizeof(twoD[0]) returns size of rows*/
     int size = sizeof(twoD)/sizeof(twoD[0]);
 
     for(int i = 0; i < size;i++)
@@ -23,22 +20,29 @@ int main() {
         {
             if(twoD[i][j] == 'F')
             {
-                holder = twoD[i][j];
-                found1 = verticalFinder(i, j, size);
+                if(verticalFinder(i, j, size))
+                {
+                    cout << "FOAM is found vertically\n";
+                }
+                if(horizontalFinder(i, j, size))
+                {
+                    cout << "FOAM is found horizontally\n";
+                }
+
             }
             if(twoD[i][j] == 'M')
             {
-                holder = twoD[i][j];
-                found2 = horizontalFinder(i, j, size);
+                if(verticalFinder(i, j, size))
+                {
+                    cout << "MASS is found vertically\n";
+                }
+                if(horizontalFinder(i, j, size))
+                {
+                    cout << "MASS is found horizontally\n";
+                }
             }
         }
     }
-
-    if(found1 == true)
-        cout << "FOAM is found\n";
-    if(found2 == true)
-        cout << "MASS is found\n";
-    return 0;
 }
 
 bool verticalFinder(int x, int y, int size)
