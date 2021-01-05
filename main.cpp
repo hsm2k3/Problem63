@@ -22,11 +22,11 @@ int main() {
             {
                 if(verticalFinder(i, j, size))
                 {
-                    cout << "FOAM is found vertically\n";
+                    cout << target1 << " is found vertically\n";
                 }
                 if(horizontalFinder(i, j, size))
                 {
-                    cout << "FOAM is found horizontally\n";
+                    cout << target1 << " is found horizontally\n";
                 }
 
             }
@@ -34,11 +34,11 @@ int main() {
             {
                 if(verticalFinder(i, j, size))
                 {
-                    cout << "MASS is found vertically\n";
+                    cout << target2 << " is found vertically\n";
                 }
                 if(horizontalFinder(i, j, size))
                 {
-                    cout << "MASS is found horizontally\n";
+                    cout << target2 << " is found horizontally\n";
                 }
             }
         }
